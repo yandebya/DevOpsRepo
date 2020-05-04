@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>drapeau</title>
+</head>
+<body>
+ <div> 
+ <div>couleur</div>
+  	<form th:action="@{creationDr}" method="post">
+  	 <label>libelle drapeau</label>
+  	 <input type="text" th:field="${drapeau.libelle_dr}" >
+  	 
+   <legend>Veuillez les couleurs de ce drapeau:</legend>
+		  <div th:each="s:${listeCouleur}">
+		    <input type="checkbox" id="coding" name="interest" th:value="${s.id_coul}" th:field="${cc.id_coul}">
+		    <label for="coding" th:text="${s.libelle_coul}"></label>
+		  </div>
+  </fieldset>
+  	 <br>
+  	  <button  type="submit" class="btn btn-success">Submit</button>
+  	  </form>
+  </div>
+</body>
+</html>

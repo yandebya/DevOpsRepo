@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+ <div th:text="${sms}"> liste </div>
+ <div>
+		<table border="1">
+			<tr>
+				<th>ID</th>
+				<th>LIBELLE</th>
+
+			</tr>
+			<tr th:each="c : ${listeDrapeau}">
+				<td th:text="${c.id_dr}"></td>
+				<td th:text="${c.libelle_dr}"></td>		
+			</tr>
+		</table>
+		<a th:href="@{creerDr}">creer</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" xmlns:th="www.thyemleaf.org">
+<title>Insertttt title here</title>
+</head>
+<body>
+ <div >ggg 
+ 
+ <div>
+		<table border="1">
+			<tr>
+				<th>ID</th>
+				<th>LIBELLE</th>
+
+			</tr>
+			<tr th:each="cr:${listeCouleur}">
+				<td th:text="${cr.id_coul}"></td>
+				<td th:text="${cr.libelle_coul}"></td>		
+			</tr>
+		</table>
+	</div>
+  </div>
+</body>
+</html>

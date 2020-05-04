@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>couleur</title>
+</head>
+<body>
+ <div> 
+ <div>couleur</div>
+  	<form th:action="@{creationCoul}" method="post">
+  	 <label>libelle couleur</label>
+  	 <input type="text" th:field="${couleur.libelle_coul}" >
+     <button  type="submit" class="btn btn-success">Submit</button>
+     </form>
+     </div>
+</body>
+</html>
